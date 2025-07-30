@@ -132,7 +132,6 @@ class OpenTelemetryCallbackHandler(BaseCallbackHandler):
                 )
             else:
                 span = self.tracer.start_span(span_name, kind=kind)
-                _set_span_attribute(span, "root_span", True)
 
             model_id = "unknown"
             
